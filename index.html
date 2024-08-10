@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookshelf Sort</title>
+    <style type="text/css">
+        .book {
+            overflow: hidden;
+        }
+        .book:hover {
+            overflow: auto;
+            width: auto !important;
+        }
+        </style>
+</head>
+<body>
+<section id="input-book-isbn">
+    <form method="post" action="lookupbook.php">
+        ISBN: <input type="text" name="isbn">
+        <input type="submit">
+    </form>
+    <ol id="books-input-list">
+    </ol>
+    <div id="book-results">
+    </div>
+</section>
+<div id="front-window-display">
+    <div id="single-book">
+        <div class="book">
+            <img src="images/01-1.png" alt="book cover" width="100" height="150">
+            <p class="book-title">Book Title <span class="book-data"></span></p>
+            <p class="book-author">Author <span class="book-data"></span></p>
+            <p class="book-isbn">ISBN <span class="book-data"></span></p>
+        </div>
+    </div>
+</div>
+<div id="bookshelf">
+</div>
+<script src="bookshelf.js"></script>
+</body>
+</html>

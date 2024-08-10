@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .bookshelf {
+            position: relative;
+        }
+    
+            #red01.box {
+                position: absolute;
+                width: 74px; /* 7.4 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform-style: preserve-3d;
+                transform: rotateX(-30deg) rotateY(-45deg);
+                left: -100px;
+            }
+    
+            #red01 .face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 0, 51, 1);
+                border: 1px solid #000;
+            }
+    
+            #red01 .front {
+                transform: translateZ(7px); /* 0.7 inches scaled down */
+            }
+    
+            #red01 .back {
+                transform: rotateY(180deg) translateZ(7px);
+            }
+    
+            #red01 .left {
+                width: 7px; /* 0.7 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform: rotateY(-90deg) translateZ(7px); /* Half of the length */
+            }
+    
+            #red01 .right {
+                width: 7px; /* 0.7 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform: rotateY(90deg) translateZ(74px); /* the length */
+            }
+    
+            #red01 .top {
+                width: 74px; /* 7.4 inches scaled down */
+                height: 7px; /* 0.7 inches scaled down */
+                transform: rotateX(90deg) translateZ(7px); /* Half of the height */
+            }
+    
+            #red01 .bottom {
+                width: 74px; /* 7.4 inches scaled down */
+                height: 7px; /* 0.7 inches scaled down */
+                transform: rotateX(-90deg) translateZ(90px); /* Half of the height */
+            }  
+            
+            #blue01.box {
+                position: absolute;
+                width: 74px; /* 7.4 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform-style: preserve-3d;
+                transform: rotateX(-30deg) rotateY(-45deg);
+            }
+    
+            #blue01 .face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 128, 255, 1);
+                border: 1px solid #000;
+            }
+    
+            #blue01 .front {
+                transform: translateZ(7px); /* 0.7 inches scaled down */
+            }
+    
+            #blue01 .back {
+                transform: rotateY(180deg) translateZ(7px);
+            }
+    
+            #blue01 .left {
+                width: 7px; /* 0.7 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform: rotateY(-90deg) translateZ(7px); /* Half of the length */
+            }
+    
+            #blue01 .right {
+                width: 7px; /* 0.7 inches scaled down */
+                height: 87px; /* 9 inches scaled down */
+                transform: rotateY(90deg) translateZ(71px); /* the length */
+                background-color: rgb(241, 239, 239);
+            }
+    
+            #blue01 .top {
+                width: 74px; /* 7.4 inches scaled down */
+                height: 7px; /* 0.7 inches scaled down */
+                background-color: rgb(241, 239, 239);
+                transform: rotateX(90deg) translateZ(5px); /* Half of the height */
+            }
+    
+            #blue01 .bottom {
+                width: 74px; /* 7.4 inches scaled down */
+                height: 7px; /* 0.7 inches scaled down */
+                transform: rotateX(-90deg) translateZ(85px);
+                background-color: rgb(241, 239, 239);
+            }
+            
+            #green01 .box {
+                position: absolute;
+                width: 74px; /* 7.4 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform-style: preserve-3d;
+                transform: rotateX(-30deg) rotateY(-45deg);
+            }
+    
+            #green01 .face {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 128, 255, 1);
+                border: 1px solid #000;
+            }
+    
+            #green01 .front {
+                transform: translateZ(7px); /* 0.7 inches scaled down */
+            }
+    
+            #green01 .back {
+                transform: rotateY(180deg) translateZ(7px);
+            }
+    
+            #green01 .left {
+                width: 7px; /* 0.7 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform: rotateY(-90deg) translateZ(7px); /* Half of the length */
+            }
+    
+            #green01 .right {
+                width: 7px; /* 0.7 inches scaled down */
+                height: 90px; /* 9 inches scaled down */
+                transform: rotateY(90deg) translateZ(74px); /* the length */
+            }
+    
+            #green01 .top {
+                width: 74px; /* 7.4 inches scaled down */
+                height: 7px; /* 0.7 inches scaled down */
+                transform: rotateX(90deg) translateZ(7px); /* Half of the height */
+            }
+    
+            #green01 .bottom {
+                width: 74px; /* 7.4 inches scaled down */
+                height: 7px; /* 0.7 inches scaled down */
+                transform: rotateX(-90deg) translateZ(90px); /* Half of the height */
+            }
+            
+    </style>
+</head>
+<body>
+<div class="bookshelf">
+    <div id="blue01" class="box">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+    <div id="red01" class="box">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+    <div id="green01" class="box">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+    <div id="yellow01" class="box">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+    </div>
+</div>
+<script>
+
+    const box = document.querySelector('.box');
+    let isDragging = false;
+    let startX, startY, currentX = -45, currentY = -30;
+
+    const onMouseDown = (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+    };
+
+    const onMouseMove = (e) => {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        currentX += dx * 0.1;
+        currentY -= dy * 0.1;
+        box.style.transform = `rotateX(${currentY}deg) rotateY(${currentX}deg)`;
+        startX = e.clientX;
+        startY = e.clientY;
+    };
+
+    const onMouseUp = () => {
+        isDragging = false;
+    };
+
+    document.addEventListener('mousedown', onMouseDown);
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+</script>
+</body>
+</html>
